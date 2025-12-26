@@ -12,7 +12,7 @@ body {
 
 #text {
   font-size: 48px;
-  color: #885555;
+  color: #333;
   animation: fadeIn 2s ease-in-out infinite alternate;
   cursor: pointer;
 }
