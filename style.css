@@ -8,6 +8,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  overflow: hidden; /* 桜がはみ出さないように */
 }
 
 #text {
@@ -26,5 +27,36 @@ body {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+/* 🌸 桜エフェクト */
+.sakura-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sakura {
+  position: absolute;
+  top: -10px;
+  width: 12px;
+  height: 12px;
+  background: pink;
+  border-radius: 50% 70% 50% 70%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-40vw, 110vh) rotate(360deg);
   }
 }
